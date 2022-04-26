@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: imafidonpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: imafidonpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: imafidonpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: imafidonpipelinesjavascriptdocker 
+          image: demosly.azurecr.io/imafidonpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
